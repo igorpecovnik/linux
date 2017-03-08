@@ -1127,7 +1127,7 @@ static void geth_tx_complete(struct geth_priv *priv)
 		if ((skb_queue_len(&priv->rx_recycle) <
 			dma_desc_rx) &&
 			skb_recycle_check(skb, priv->buf_sz))
-			__skb_queue_head(&priv->rx_recycle, skb);
+			skb_queue_head(&priv->rx_recycle, skb);
 		else
 			dev_kfree_skb(skb);
 	}
