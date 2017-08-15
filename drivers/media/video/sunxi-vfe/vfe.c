@@ -1814,7 +1814,7 @@ static int vidioc_g_fmt_vid_cap(struct file *file, void *priv,
 	f->fmt.pix.width        = dev->width;
 	f->fmt.pix.height       = dev->height;
 	f->fmt.pix.field        = dev->vb_vidq.field;
-	f->fmt.pix.pixelformat  = dev->fmt->bus_pix_code;
+	f->fmt.pix.pixelformat  = dev->fmt->fourcc;
 	//  f->fmt.pix.bytesperline = (f->fmt.pix.width * dev->fmt->depth) >> 3;
 	//  f->fmt.pix.sizeimage    = f->fmt.pix.height * f->fmt.pix.bytesperline;
 
